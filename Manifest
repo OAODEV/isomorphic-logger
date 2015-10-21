@@ -1,0 +1,8 @@
+[Service]
+name=request
+unittest_cmd=true
+accept_cmd=true
+service_port=8080
+
+[Dependencies]
+Environment_name

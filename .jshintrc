@@ -1,0 +1,28 @@
+{
+    "boss": true,
+    "browser": true,
+    "curly": true,
+    "eqeqeq": true,
+    "eqnull": true,
+    "esnext": true,
+    "expr": true,
+    "globals": {
+        "_": true,
+        "console": true,
+        "define": true,
+        "exports": true,
+        "ga": true
+        "module": true,
+        "ramenq": true,
+        "Raygun": true,
+        "require": true
+    },
+    "immed": true,
+    "noarg": true,
+    "node": true,
+    "quotmark": "double",
+    "smarttabs": true,
+    "trailing": true,
+    "undef": true,
+    "unused": true
+}

@@ -1,0 +1,18 @@
+machine:
+  services:
+    - docker
+  environment:
+    herd_service_name: isomorphic-logger
+    herd_unittest_cmd: npm test
+
+    herd_build_tag: $(cat $CIRCLE_PROJECT_REPONAME/Version)_build.$(echo $CIRCLE_SHA1 | cut -c1-7)
+
+dependencies:
+  override:
+    - echo "The build name is in here!!!" r.iadops.com/$herd_service_name:$herd_build_tag
+    - docker info
+    - docker build -t r.iadops.com/$herd_service_name:$herd_build_tag .
+
+test:
+  override:
+    - docker run r.iadops.com/$herd_service_name:$herd_build_tag $herd_unittest_cmd
